@@ -1,0 +1,22 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar id="logo"></mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/">LOGIN</a>
+      <a mat-list-item routerLink="/cadastrar">NOVO USUÁRIO</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <div fxLayout="row" fxLayoutAlign="center center" class="login-main">
+    <form>
+      <label id=labelLogin> Usuário</label>
+      <input type="text" id="F" name="lastname" [(ngModel)]="username" placeholder="Usuário">
+      <label id=labelLogin>Senha</label>
+      <input type="password" id="F" name="lastname" [(ngModel)]="password" placeholder="Password">
+
+      <button id='botao-cadastro1' mat-button (click)="checkLogin()">Cadastrar-se</button>
+    </form>
+  </div>
+</mat-sidenav-container>

@@ -1,0 +1,22 @@
+.format-text {
+    width: 300px;
+    margin-left: 10px;
+    text-align:justify;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.itemText {
+    width: 300px;
+    margin-left: 10px;
+    text-align:justify;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.mat-dialog-title {
+    color: black;
+    font-weight: bold;
+}

@@ -1,0 +1,154 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-tab-labels {
+    background-color: #263238;
+}
+
+mat-ink-bar{
+    background-color: white;
+}
+.mat-tab-label-content {
+    color: grey;
+}
+.mat-toolbar.mat-primary.mat-toolbar-single-row {
+    background:#102027;
+}
+
+.mat-tab-label.mat-ripple.ng-star-inserted{
+    width: 50%;
+}
+
+.mat-tab-label-content{
+    color: white;
+}
+
+.mat-drawer-container {
+    background-color: black;
+}
+.mat-list-item-content { 
+    color: white;
+}
+
+
+#logo {
+    background: url('../src/imgs/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 190px;
+    height: 80px;
+    margin-top: 20px; 
+}
+
+.mat-drawer-inner-container {
+    background-color: #263238;
+}
+
+.form-container {
+    margin: auto;
+    width: 50%;
+    border: -1px solid;
+    padding: 10px;
+    align-content: center;
+  }
+  
+  .alingContent {
+    width: 70%;
+    margin-left: 30%;
+    margin-right: 30%;
+
+  }
+ 
+  #botao-cadastro{
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+ 
+label{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 30px;
+}
+
+#labelLogin{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 30px;
+    color: black;
+}
+
+
+#botao-cadastro1{
+    width: 35.7%;
+    margin-top: 10px;
+    color: black;
+    background-color: white;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+
+.mat-option-ripple.mat-ripple {color: white}
+
+
+#buttonLinkOut {
+    position: relative;
+    left: 600px;
+    
+}
+
+.mat-dialog-content{
+    background-color: white;
+    padding: 90px;
+}
+.mat-dialog-container {
+    background-color: white;
+}
+
+
+input[type=text], select {
+    width: 40%;
+    color: black;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 500px;
+    padding: 12px 20px;
+    display: inline-block;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    align-content: center
+  }
+  input[type=password], select {
+    width: 40%;
+    color: black;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 500px;
+    padding: 12px 20px;
+    display: inline-block;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    align-content: center
+  }
+  
+  input[type=submit] {
+    width: 60%;
+    background-color: #4CAF50;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }

@@ -1,0 +1,30 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar>GetGames</mat-toolbar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Login</span>
+    </mat-toolbar>
+    <div class="container"><br><br><br><br>
+      <mat-card-content>
+        <form (submit)="loginUser($event)" id='form'>
+          <div class="form-group">
+            <input type="email" placeholder="exemplo@exemplo.com" class="form-control" id="email" required>
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Digite sua senha" class="form-control" id="password" required>
+          </div>
+          <button type="submit" value="Submit" routerLink="/home-usuario" id="btnCadastrar"
+            class="btn btn-s uccess">Logar</button>
+        </form>
+      </mat-card-content>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

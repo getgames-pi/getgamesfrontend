@@ -1,0 +1,60 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 200px;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+
+  .form-control {
+    width: 500px;
+    margin: auto;
+    width: 40%;
+    border: -1px solid;
+    padding: 10px;
+   }
+  
+   #btnCadastrar { margin: auto;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: greenyellow;
+    color: black;
+  }
+  
+  body {
+    background-color:white;
+    margin:50px 0px; padding:0px;
+    text-align:center;
+    align:center;
+  
+   }
+  
+  
+   h1 { color: green}
+  
+   .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container > * {
+    width: 50%;
+  }
+  
+  table {
+    width: 100%;
+    font-size: 2px;
+  }
+  

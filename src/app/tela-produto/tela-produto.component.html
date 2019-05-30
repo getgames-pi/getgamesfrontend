@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>{{data.nome}}</h1>
+  <div class="alinhando-imagem">
+    <img id="img-modal" src={{data.imagem}} class="img-fluid" alt="">
+    <p class="format-text"> {{data.descricao}}</p>
+  </div>
+  <button mat-button class="editbtn" routerLink="/update-game/{{data.id}}" (click)=onNoClick()
+    data-dismiss="modal"></button>
+  <button mat-button class="deletebtn" routerLink="/home-usuario" (click)="deleteGame(data.id)"
+    data-dismiss="modal"></button>
+  <button mat-button class="principalbtn" (click)="openDialogUser()" data-dismiss="modal">COMPRAR</button>
+  <button mat-button class="naobtn" (click)=onNoClick() data-dismiss="modal">NÃO, OBRIGADO!</button>
+  

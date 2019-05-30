@@ -1,0 +1,52 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar id="logo" routerLink="/home-usuario"></mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/comprar">Comprar</a>
+      <a mat-list-item routerLink="/vender">Vender</a>
+      <a mat-list-item routerLink="/trocar">Trocar</a>
+      <a mat-list-item routerLink="/meus-produtos">Histórico</a>
+      <a mat-list-item routerLink="/logout">Sair</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Vender Jogo</span>
+    </mat-toolbar>
+    <mat-tab-group>
+      <mat-tab label='Jogos'>
+        <main class="grid">
+          <article *ngFor="let game of games$" >
+              <img class="img-game" src={{game.imagem}} alt="Sample photo">
+              <div class="text">
+                <p>{{game.nome}}</p>
+                <button id={{game.id}} (click)=getGameAndDialog(game.id)>Detalhes</button>
+            </div>
+          </article>
+        </main>
+      </mat-tab>
+      <mat-tab label="Cadastrar Jogo">
+        <div class="div">
+          <form>
+              <label id=label > NOME DO JOGO</label>
+              <input type="text" id="F" name="firstname"  [(ngModel)]="gameInformation.nome" placeholder="Nome" required>
+              <label id=label > DATA DE LANÇAMENTO</label>
+              <input type="text" id="F" name="lastname" [(ngModel)]="gameInformation.dataLancamento" placeholder="dd/MM/YYYY">
+              <label id=label > URL IMAGEM</label>
+              <input type="text" id="F" name="lastname" [(ngModel)]="gameInformation.imagem" placeholder="URL Imagem">
+              <label id=label > DESCRIÇÃO</label>
+              <input type="text" id="F" name="lastname" [(ngModel)]="gameInformation.descricao" placeholder="Descrição do Jogo">
+              <br>
+            <button id='botao-cadastro1' mat-button routerLink="/home-usuario" (click)="addNewGame()">Cadastrar Jogo</button>
+          </form>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-sidenav-content>
+</mat-sidenav-container>
